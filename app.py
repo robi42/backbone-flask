@@ -48,6 +48,5 @@ def update_todo(id):
     return jsonify(id=id, content=todo.content, done=todo.done)
 
 def delete_todo(id):
-    todo = Todo.get_by_id(id)
-    todo.delete()
+    Todo.get_by_id(id).delete()
     return jsonify()
