@@ -11,15 +11,13 @@ def index():
 def create_or_retrieve_todos():
     if request.method == 'POST':
         return create_todo()
-    else:
-        return retrieve_todos()
+    return retrieve_todos()
 
 @app.route('/todos/<int:id>', methods=['PUT', 'DELETE'])
 def update_or_delete_todo(id):
     if request.method == 'PUT':
         return update_todo(id)
-    else:
-        return delete_todo(id)
+    return delete_todo(id)
 
 def create_todo():
     data = json.loads(request.data)
