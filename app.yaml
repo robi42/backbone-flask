@@ -1,0 +1,35 @@
+application: backbone-tinker
+version: 1
+runtime: python
+api_version: 1
+
+builtins:
+- appstats: on
+- datastore_admin: on
+
+handlers:
+- url: /favicon.ico
+  static_files: static/img/favicon.ico
+  upload: static/img/favicon.ico
+
+- url: /cache.manifest
+  mime_type: text/cache-manifest
+  static_files: static/cache.manifest
+  upload: static/cache.manifest
+
+- url: /app.min.js
+  static_files: static/app.min.js
+  upload: static/app.min.js
+
+- url: /screen.min.css
+  static_files: static/screen.min.css
+  upload: static/screen.min.css
+
+- url: /img
+  static_dir: static/img
+
+- url: /docs
+  static_dir: static/docs
+
+- url: /.*
+  script: boot.py

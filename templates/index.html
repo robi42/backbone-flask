@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" manifest="cache.manifest">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Backbone Demo: Todos</title>
+    <link rel="stylesheet" media="all" href="screen.min.css" />
+    <script src="app.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Todo App Interface -->
+
+    <div id="todoapp">
+
+      <div class="title">
+        <h1>Todos</h1>
+      </div>
+
+      <div class="content">
+
+        <div id="create-todo">
+          <input id="new-todo" placeholder="What needs to be done?" type="text" />
+          <span class="ui-tooltip-top" style="display:none;">Press Enter to save this task</span>
+        </div>
+
+        <div id="todos">
+          <ul id="todo-list"></ul>
+        </div>
+
+        <div id="todo-stats"></div>
+
+      </div>
+
+    </div>
+
+    <ul id="instructions">
+      <li>Double-click to edit a todo.</li>
+      <li><a href="docs/main.html">View the annotated source.</a></li>
+    </ul>
+
+    <div id="credits">
+      Created by
+      <br />
+      <a href="http://jgn.me/">J&eacute;r&ocirc;me Gravel-Niquet</a>
+      <br />
+      Hacked on by
+      <br />
+      <a href="http://robert42.com/">Robert Thurnher</a>
+    </div>
+
+    <script>require('main');</script>
+  </body>
+
+</html>
