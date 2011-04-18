@@ -23,7 +23,7 @@ def create_todo():
     data = json.loads(request.data)
     todo = Todo(content=data['content'], done=data['done'], order=data['order'])
     todo.put()
-    return jsonify(id=int(todo.key().id()),
+    return jsonify(id=todo.key().id(),
                    content=todo.content,
                    done=todo.done,
                    order=todo.order)
