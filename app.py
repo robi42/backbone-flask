@@ -29,10 +29,7 @@ def create_todo():
                    order=todo.order)
 
 def retrieve_todos():
-    content = json.dumps([dict(id=todo.key().id(),
-                               content=todo.content,
-                               done=todo.done,
-                               order=todo.order) for todo in Todo.all()])
+    content = json.dumps([todo.to_dict() for todo in Todo.all()])
     response = make_response(content)
     response.mimetype = 'application/json'
     return response
